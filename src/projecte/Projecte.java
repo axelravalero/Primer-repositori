@@ -22,8 +22,11 @@ public class Projecte {
     int num1 , num2 , num3 , programa , capitols;
     String nom=null;
     boolean finalitzat=false;
+    boolean omplit=false;
     double valoració=0.0;
+    programa=0;
     
+    while(programa < 5){
     System.out.println("1 . Afegir Anime");
     System.out.println("2 . Borrar Anime");
     System.out.println("3 . Modificar Anime");
@@ -34,9 +37,16 @@ public class Projecte {
     System.out.println("Introduiu l'operació desitgada.");
     programa=ent.nextInt();
     
-    while(programa < 5){
+     
+    
     switch (programa) {
-        case '1':   
+        case '1':
+            if(!omplit){
+                System.out.println("Ben fet.");
+            };
+            System.out.println("Nom del anime");
+            System.out.println("Borrar");
+            omplit=true;
             break;
         case '2':
             break;
@@ -44,12 +54,27 @@ public class Projecte {
             break;
         case '4':
             break;
+            
         default:
-            System.out.println("Introduïr un altre anime? 1-Si 2-No");
+            if(programa > 5){
+        System.out.println("Introdueix un nombre valid!!");
+        } else {
+        if(programa == 5){
+            System.exit(0);
+        } else {   
+            System.out.println("Realitzar una altra operació? 1-Si 2-No");
             num3=ent.nextInt();
+            if (num3==2){
+                System.exit(0);}
+       
     }
-    }
+  
     
     }
-    
+            ;
+            
+    }
 }
+    }
+}
+
