@@ -19,7 +19,10 @@ public class Projecte {
     public static void main(String[] args) {
         // TODO code application logic here
     Scanner ent=new Scanner(System.in);
-    int num1 , num2 , num3 , programa;
+    int num1 , num2 , num3 , programa , capitols;
+    String nom=null;
+    boolean finalitzat=false;
+    double valoració=0.0;
     
     System.out.println("1 . Afegir Anime");
     System.out.println("2 . Borrar Anime");
